@@ -3,6 +3,11 @@
   "description": "Trying to get the hang of Node",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.x"
+    "express": "3.x",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.10.8"
+  },
+  "devDependencies": {
+    "mongoose": "^4.13.0"
   }
 }
