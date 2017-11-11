@@ -4,6 +4,7 @@ Schema = mongoose.Schema
 var BlogPostSchema = new Schema({
     id : Schema.Types.ObjectId,
     title: String,
+    slug: String,
     content: String,
     image: String,
     meta: {
