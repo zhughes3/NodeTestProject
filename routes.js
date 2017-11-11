@@ -4,4 +4,5 @@ module.exports = app => {
     app.get('/blog/:slug', posts.read)
     app.post('/blog', posts.create)
     app.delete('/blog/:slug', posts.delete)
+    app.get('/deleteAll', posts.deleteAll)
 }
