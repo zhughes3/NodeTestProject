@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog Post</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <form id="postBlog">
-        <input type="text" name="title">
-        <input type="text" name="content">
-        <input type="file" name="image">
+    <form id="postBlog" onsubmit="postBlog()">
         <fieldset>
-            <legend>Meta</legend>
-            <input type="text" name="author">
-            <input type="text" name="description">
+            <legend>Blog Post</legend>
+
+            <input type="text" placeholder="title" name="title">
+            <input type="text" placeholder="content" name="content">
+            <input type="file" name="image">
+
+            <fieldset>
+                <legend>Meta</legend>
+                <input type="text" placeholder="author" name="author">
+                <input type="text" placeholder="name" name="description">
+            </fieldset>
+
+            <input type="submit">
         </fieldset>
     </form>
 
