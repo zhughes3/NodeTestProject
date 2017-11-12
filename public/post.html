@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post to Blog</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<form id="postBlog" onsubmit="postBlog()">
+    <fieldset>
+        <legend>Blog Post</legend>
+
+        <input type="text" placeholder="title" name="title">
+        <input type="text" placeholder="content" name="content">
+        <input type="file" name="image">
+
+        <fieldset>
+            <legend>Meta</legend>
+            <input type="text" placeholder="author" name="author">
+            <input type="text" placeholder="name" name="description">
+        </fieldset>
+
+        <input type="submit">
+    </fieldset>
+</form>
+
+</body>
+</html>
