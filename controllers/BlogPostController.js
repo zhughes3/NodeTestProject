@@ -39,7 +39,8 @@ exports.readAll = (req, resp) => {
         for (var i = 0; i < results.length; i++) {
             console.log(results[i].title)
         }
-        resp.render('index', {posts: results})
+        //blog.pug must be in views directory
+        resp.render('blog', {posts: results})
         //return resp.send(results)
     })
 }
