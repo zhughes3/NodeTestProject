@@ -39,7 +39,8 @@ exports.readAll = (req, resp) => {
         for (var i = 0; i < results.length; i++) {
             console.log(results[i].title)
         }
-        return resp.send(results)
+        resp.render('index', {posts: results})
+        //return resp.send(results)
     })
 }
 

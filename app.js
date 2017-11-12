@@ -20,6 +20,10 @@ db.once('open', () => {
 
 var app = express()
 
+// https://expressjs.com/en/guide/using-template-engines.html
+app.set('views', './views')
+app.set('view engine', 'pug')
+
 //express app configurations
 app.configure( () => {
     //tell express to expose the body of all requests
