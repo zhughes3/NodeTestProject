@@ -1,11 +1,16 @@
+var quill = new Quill('#content', {
+    theme: 'snow'
+})
+
 function postBlog() {
     var form = document.getElementById('postBlog')
-    var imgName = '/' + form[3].files[0].name
+    var imgName = '/' + form[2].files[0].name
     var title = form[1].value
-    var content = form[2].value
 
-    var author = form[5].value
-    var description = form[6].value
+    var content = quill.root.innerHTML
+
+    var author = form[14].value
+    var description = form[15].value
 
     var postContent = {
         "title": title,
@@ -22,4 +27,9 @@ function postBlog() {
     XHR.open('POST', '/blog')
     XHR.setRequestHeader('Content-Type', 'application/json')
     XHR.send(JSON.stringify(postContent))
+}
+
+function sendEmail() {
+    var form = document.getElementById('contactForm');
+
 }
