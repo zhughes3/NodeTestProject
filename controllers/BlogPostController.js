@@ -20,17 +20,20 @@ exports.create = (req,resp) => {
         if (error) {
             throw error
         } else {
-            console.log(`BlogPost saved successfully with title=${post.title}`)
+            console.log(`BlogPost saved successfully with slug=${post.slug}`)
+            return resp.send('201', post.slug)
         }
     })
 
-    resp.redirect('../blog')
+
+
 }
 
 exports.read = (req, resp) => {
     var slug = req.params.slug
     BlogPost.findOne({slug: slug}, (err, results) => {
-        resp.render('blog', { posts: results})
+        //resp.render('blog', { posts: results})
+        resp.render('post', {p: results})
     })
 }
 
@@ -38,7 +41,7 @@ exports.readAll = (req, resp) => {
     console.log('inside read all')
     BlogPost.find({}, (err, results) => {
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i].title)
+            console.log(results[i].slug)
         }
 
         //this render function looks for blog.pug in views directory
