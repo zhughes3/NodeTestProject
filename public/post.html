@@ -5,35 +5,58 @@
     <title>Post to Blog</title>
     <script src="//cdn.quilljs.com/1.3.4/quill.js"></script>
     <link href="//cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css">
 </head>
 <body>
 
+<div class="container">
+    <nav class="navbar navbar-default">
+        <a class="navbar-brand" href="#">Zachary Hughes</a>
+        <a href="/blog">Blog</a>
+        <a href="/resume.html">Resume</a>
+        <a href="https://www.github.com/zhughes3">Projects</a>
+        <a href="/contact.html">Contact Me</a>
+        <a href="/post.html">Admin</a>
+    </nav>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Post</h1>
+        </div>
+        <div class="col-sm-12">
 
-<form id="postBlog" onsubmit="postBlog()">
-    <fieldset>
-        <legend>Blog Post</legend>
+        </div>
+        <form id="postBlog" onsubmit="postBlog()">
+            <div class="form-group">
+                <label for="titleInput">Title</label>
+                <input type="text" placeholder="title" name="title" id="titleInput">
+                <label for="imageInput">Image</label>
+                <input type="file" name="image" id="imageInput">
+            </div>
 
-        <input type="text" placeholder="title" name="title">
+            <div class="form-group">
+                <label for="content">Post</label>
+                <div id="content"></div>
+            </div>
 
-        Image<input type="file" name="image">
-        <fieldset>
-            <legend>Post</legend>
-            <div id="content"></div>
-        </fieldset>
+            <div class="form-group">
+                <label for="authorInput">Author</label>
+                <input type="text" placeholder="author" name="author" id="authorInput">
 
-        <fieldset>
-            <legend>Meta</legend>
-            <input type="text" placeholder="author" name="author">
-            <input type="text" placeholder="name" name="description">
-        </fieldset>
+                <label for="descriptionInput">Description</label>
+                <input type="text" placeholder="name" name="description" id="descriptionInput">
+            </div>
 
-        <input type="submit">
-    </fieldset>
-</form>
+            <input type="submit">
+        </form>
+    </div>
 
-
+    <div class="row">
+        <a id="postedSite" href=""></a>
+    </div>
 
 
+
+</div>
 <script src="script.js"></script>
 
 </body>

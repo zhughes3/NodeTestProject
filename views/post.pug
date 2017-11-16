@@ -1,0 +1,10 @@
+html
+    head
+        title= 'Blog'
+    body
+        div
+            h1 #{p.title}
+            small #{p.meta.published}
+            p Written by #{p.meta.author}
+            p Description: #{p.meta.description}
+            div !{p.content}

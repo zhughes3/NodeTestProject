@@ -25,10 +25,15 @@ function postBlog() {
     }
 
     var XHR = new XMLHttpRequest()
+    XHR.addEventListener('load', (e) => {
+        var link = document.getElementById('postedSite')
+        link.setAttribute('href', XHR.responseText)
+    })
 
-    XHR.open('POST', '/blog')
+    XHR.open("POST", '/blog')
     XHR.setRequestHeader('Content-Type', 'application/json')
     XHR.send(JSON.stringify(postContent))
+
 }
 
 function postImage(data) {

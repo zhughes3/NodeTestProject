@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <title>Zachary Hughes</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap-4.0.0-beta.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <p id="name">Zachary Hughes</p>
+<div class="container">
 
-    <nav>
-        <a href="/post.html">Post a blog post.</a>
+    <nav class="navbar navbar-default">
+        <a class="navbar-brand" href="#">Zachary Hughes</a>
+        <a href="/blog">Blog</a>
         <a href="/resume.html">Resume</a>
         <a href="https://www.github.com/zhughes3">Projects</a>
-        <a href="/contact.html">Contact Me</a>
+        <a href="/post.html">Admin</a>
     </nav>
+    <div class="row">
 
-    <p>Welcome to my homepage.</p>
+        <p>Welcome to my homepage.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="images/me.jpg" alt="A picture of me" class="img-fluid mx-auto">
+        </div>
+        <div class="col-sm-12">
+            <p>Use the form below to send me a message, be sure to include your name and contact info!</p>
+            <form onsubmit="sendEmail()">
+                <textarea rows="10" cols="120" maxlength="280"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+
+    </div>
+
+</div>
 
 
 </body>

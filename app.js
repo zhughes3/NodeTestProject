@@ -28,6 +28,7 @@ app.set('view engine', 'pug')
 app.configure( () => {
     //tell express to expose the body of all requests
     app.use(express.bodyParser())
+    //set the public directory as the root of the server
     app.use(express.static('public'))
 })
 
